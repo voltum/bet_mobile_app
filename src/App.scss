@@ -1,0 +1,188 @@
+html{
+    overflow: hidden;
+}
+body{
+    background-color: #152920;
+    background-image: url(./img/bg.png);
+    background-repeat: no-repeat;
+    // height: 100vh; 
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: 100vw 100vh;
+    color: white;
+    position: absolute;
+
+    .bg_left{
+        position: absolute;
+        max-width: 45vw;
+        left: 0;
+        bottom: 0;
+        z-index: 5;
+    }
+    .bg_right{
+        position: absolute;
+        max-width: 30vw;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+img{
+    max-width: 100%;
+    pointer-events : none;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+
+    .header_bg{
+        position: absolute;
+        align-self: flex-start;
+        max-width: 100%;
+        left: 0;
+        z-index: -1;
+    }
+    .header_bg_right{
+        position: absolute;
+        align-self: flex-start;
+        max-width: 100%;
+        z-index: -1;
+        right: 0;
+    }
+
+    img.logo_img{
+        width: 245px;
+        max-width: 100%;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .main_text_img{
+        position: relative;
+        max-width: 490px;
+        width: 100%;
+    }
+
+
+    .main_btn_block{
+        position: absolute;
+        bottom: 0;
+        bottom: 45px;
+        text-align: center;
+
+        .balls_img{
+            bottom: 0;
+            z-index: 4;
+        }
+        .main_btn{
+            display: block;
+            position: relative;
+            z-index: 10;
+            max-width: 80%;
+            margin: -50px auto auto;
+        }
+        .main_btn img{
+            z-index: 10;
+            transition: 0.1s;
+            animation: btn_scaling 3s ease 3s infinite normal forwards;
+
+            &:hover{
+                transform: scale(1.2);
+                animation: none;
+            }
+            &:active{
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+/*=========================MEDIA=========================*/
+@media screen and (max-width: 320px) {
+    .content{
+        .main_text_img{
+            max-width: 260px;
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    body{
+        backdrop-filter: blur(20px);
+    }
+}
+@media screen and (min-height: 900px) {
+    .content{
+        .main_text_img{
+            max-width: 590px;
+        }
+    }
+}
+@media screen and (max-height: 830px) {
+    .header{
+        height: 17vh;
+
+        .logo img{
+            width: 30vh;
+        }
+    }
+    .content{
+        .main_text_img{
+            height: 40vh;
+            width: auto;
+        }
+        .main_btn_block {
+
+            .balls_img{
+                width: 50vh;
+            }
+        }
+    }
+}
+
+
+// @keyframes btn_scaling {
+//     0%{
+//         transform: scale(1);
+
+//     }
+//     50%{
+//         transform: scale(1.1);
+//     }
+//     100%{
+//         transform: scale(1);
+//     }
+// }
+@keyframes btn_scaling {
+    0% {
+        transform: none;
+    }
+    16% {
+        transform: rotateZ(-10deg) scale(1.2);
+    }
+    20% {
+        transform: rotateZ(10deg) scale(1.2);
+    }
+    22.5% {
+        transform: rotateZ(-8deg) scale(1.2);
+    }
+    25% {
+        transform: rotateZ(8deg) scale(1.2);
+    }
+    27.5% {
+        transform: rotateZ(-7deg) scale(1.2);
+    }
+    28% {
+        transform: rotateZ(0) scale(1.2);
+    }
+    33% {
+        transform: rotateZ(0) scale(1);
+    }
+}
