@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.scss';
 import Header from './components/Header';
-import bg_left from './img/bg_left_02.png';
-import bg_right from './img/bg_right_03.png';
+import bg_left from './img/bg_left_03.png';
+import bg_right from './img/bg_right_04.png';
 import Content from './components/Content';
 
 function App() {

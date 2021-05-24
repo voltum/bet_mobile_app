@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../img/logo.png';
-import header_bg from '../img/header_bg_01.png';
+import header_bg from '../img/header_bg_03.png';
 import header_bg2 from '../img/header_bg_02.png';
 
 
