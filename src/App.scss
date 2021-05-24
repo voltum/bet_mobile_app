@@ -28,6 +28,12 @@ body{
         z-index: -1;
     }
 }
+.overlay{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 img{
     max-width: 100%;
     pointer-events : none;
@@ -94,7 +100,7 @@ img{
         .main_btn img{
             z-index: 10;
             transition: 0.1s;
-            animation: btn_scaling 3s ease 3s infinite normal forwards;
+            animation: btn_scaling 1.5s ease 1.5s infinite normal forwards;
 
             &:hover{
                 transform: scale(1.2);
@@ -151,41 +157,41 @@ img{
 }
 
 
-// @keyframes btn_scaling {
-//     0%{
-//         transform: scale(1);
-
-//     }
-//     50%{
-//         transform: scale(1.1);
-//     }
-//     100%{
-//         transform: scale(1);
-//     }
-// }
 @keyframes btn_scaling {
-    0% {
-        transform: none;
+    0%{
+        transform: scale(1);
+
     }
-    16% {
-        transform: rotateZ(-10deg) scale(1.2);
+    50%{
+        transform: scale(1.2);
     }
-    20% {
-        transform: rotateZ(10deg) scale(1.2);
-    }
-    22.5% {
-        transform: rotateZ(-8deg) scale(1.2);
-    }
-    25% {
-        transform: rotateZ(8deg) scale(1.2);
-    }
-    27.5% {
-        transform: rotateZ(-7deg) scale(1.2);
-    }
-    28% {
-        transform: rotateZ(0) scale(1.2);
-    }
-    33% {
-        transform: rotateZ(0) scale(1);
+    100%{
+        transform: scale(1);
     }
 }
+// @keyframes btn_scaling {
+//     0% {
+//         transform: none;
+//     }
+//     16% {
+//         transform: rotateZ(-10deg) scale(1.2);
+//     }
+//     20% {
+//         transform: rotateZ(10deg) scale(1.2);
+//     }
+//     22.5% {
+//         transform: rotateZ(-8deg) scale(1.2);
+//     }
+//     25% {
+//         transform: rotateZ(8deg) scale(1.2);
+//     }
+//     27.5% {
+//         transform: rotateZ(-7deg) scale(1.2);
+//     }
+//     28% {
+//         transform: rotateZ(0) scale(1.2);
+//     }
+//     33% {
+//         transform: rotateZ(0) scale(1);
+//     }
+// }

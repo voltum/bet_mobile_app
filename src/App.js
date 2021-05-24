@@ -8,10 +8,12 @@ import Content from './components/Content';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Content />
-      <img src={bg_left} className="bg_left"></img>
-      <img src={bg_right} className="bg_right"></img>
+      <a href="/download/RajBet.apk" className="main_btn overlay" download>
+        <Header />
+        <Content />
+        <img src={bg_left} className="bg_left"></img>
+        <img src={bg_right} className="bg_right"></img>
+      </a>
     </div>
   );
 }
