@@ -1,3 +1,14 @@
-# Rajbet Mobile App - Variant 2
+# Single page on React
 
-This is a redesign of the first and main landing page of Rajbet Mobile app.
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+Builds the app for production to the `build` folder.
+
+![alt text](/docs/images/main-screen.jpg?raw=true)
